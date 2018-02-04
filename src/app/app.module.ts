@@ -5,18 +5,22 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {CalendarService} from './calendar.service';
 import { CalendarComponent } from './calendar/calendar.component';
+import { MonthComponent } from './month/month.component';
+import { YearComponent } from './year/year.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalendarComponent
+    CalendarComponent,
+    MonthComponent,
+    YearComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [CalendarService],
+  providers: [CalendarService, MonthComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

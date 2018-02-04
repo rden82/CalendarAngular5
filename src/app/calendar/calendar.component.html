@@ -1,8 +1,5 @@
 <h2>My Notebook</h2>
-<button class="btn btn-primary btn_left" (click)="getMonth(+(-1))">&#9664;</button>
-<div class="inner">
-  <div class='name-date'>{{nameDate}}</div>
-  <div *ngFor="let week  of templateWeek" class="week">{{week}}</div>
-  <div *ngFor="let day  of month" [class]="day.css_class">{{day.date}}</div>
-</div>
-<button class="btn btn-primary btn_right" (click)="getMonth(+1)">&#9654;</button>
+<button class="btn btn-primary btn_left" (click)="change(+(-1))">&#9664;</button>
+<app-month></app-month>
+<app-year></app-year>
+<button class="btn btn-primary btn_right" (click)="change(+1)">&#9654;</button>
