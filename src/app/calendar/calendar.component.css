@@ -1,0 +1,18 @@
+div.inner {
+  display: inline-table;
+  width: 350px;
+}
+div.name-date {
+  display: inline-table;
+  width: 350px;
+  border: 2px groove lightgray;
+  text-align: center;
+  width: 350px;
+  cursor: pointer;
+  background: gray;
+  color: white;
+}
+div.name-date:hover {
+  background: black;
+  color: white;
+}

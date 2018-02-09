@@ -34,15 +34,3 @@ div.cells:hover {
   background: black;
   color: white;
 }
-div.name-date {
-  border: 2px groove lightgray;
-  text-align: center;
-  width: 350px;
-  cursor: pointer;
-  background: gray;
-  color: white;
-}
-div.name-date:hover {
-  background: black;
-  color: white;
-}

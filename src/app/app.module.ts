@@ -20,7 +20,7 @@ import { YearComponent } from './year/year.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [CalendarService, MonthComponent],
+  providers: [CalendarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

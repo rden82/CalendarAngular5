@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MonthComponent} from '../month/month.component';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
+import {CalendarService} from '../calendar.service';
 
 @Component({
   selector: 'app-calendar',
@@ -10,12 +11,20 @@ import {of} from 'rxjs/observable/of';
 })
 
 export class CalendarComponent implements OnInit {
-
-  constructor(public monthComponent: MonthComponent) {
+  @ViewChild(MonthComponent)
+  private monthComponent: MonthComponent;
+  flag: boolean;
+  constructor(public calendarService: CalendarService) {
+    this.calendarService.getFlag().subscribe(flag => this.flag = flag);
   }
   ngOnInit() {
   }
   change(_step): Observable<void> {
+    this.calendarService.getFlag().subscribe(flag => this.flag = flag);
     return of (this.monthComponent.getMonth(_step));
+ }
+  getYear(step): void {
+    this.calendarService.changeFlag();
+    this.calendarService.getFlag().subscribe(flag => this.flag = flag);
   }
 }

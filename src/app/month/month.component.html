@@ -1,5 +1,4 @@
-<div *ngIf="flagDays" class="inner">
-  <div class='name-date' (click)="getYear(0)">{{nameDate}}</div>
+<div class="inner">
   <div *ngFor="let week of templateWeek" class="week">{{week}}</div>
   <div  *ngFor="let day of month" [class]="day.css_class">{{day.date}}</div>
 </div>

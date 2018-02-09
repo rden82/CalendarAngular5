@@ -12,8 +12,8 @@ export class MonthComponent implements OnInit {
   nameMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   templateWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Cб', 'Вс'];
   month: Day[];
-  flagDays = true;
-  constructor(public calendarService: CalendarService) {}
+  constructor(public calendarService: CalendarService) {
+  }
 
   ngOnInit() {
     this.getMonth(0);
@@ -23,6 +23,7 @@ export class MonthComponent implements OnInit {
     this.calendarService.TempYear = this.calendarService.TempDate.getFullYear();
     this.calendarService.TempMonth = this.calendarService.TempDate.getMonth();
     this.calendarService.getMonth(this.calendarService.TempYear, this.calendarService.TempMonth).subscribe(month => this.month = month);
-    this.nameDate = this.nameMonths[this.calendarService.TempMonth] + ' ' + this.calendarService.TempYear;
+    this.calendarService.nameDate = this.nameMonths[this.calendarService.TempMonth] + ' ' + this.calendarService.TempYear;
   }
+
 }

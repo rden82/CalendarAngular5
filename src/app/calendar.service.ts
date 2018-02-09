@@ -10,10 +10,16 @@ export class CalendarService {
   TempDate: Date = new Date();
   TempYear: number = this.TempDate.getFullYear();
   TempMonth: number = this.TempDate.getMonth();
+  nameDate: string;
   flagDays = true;
   constructor() {}
   getMonth(_year, _month): Observable<Day[]> {
     return of(this.year.getMonth(_year, _month));
   }
-
+  getFlag(): Observable<boolean> {
+    return of(this.flagDays);
+  }
+  changeFlag(): void {
+    this.flagDays = !this.flagDays;
+  }
 }
