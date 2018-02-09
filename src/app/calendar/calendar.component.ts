@@ -20,7 +20,6 @@ export class CalendarComponent implements OnInit {
   ngOnInit() {
   }
   change(_step): Observable<void> {
-    this.calendarService.getFlag().subscribe(flag => this.flag = flag);
     return of (this.monthComponent.getMonth(_step));
  }
   getYear(step): void {
