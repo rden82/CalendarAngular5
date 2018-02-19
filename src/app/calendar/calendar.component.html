@@ -1,7 +1,7 @@
 <h2>My Notebook</h2>
 <button class="btn btn-primary btn_left" (click)="change(+(-1))">&#9664;</button>
 <div class="inner">
-  <div class='name-date' (click)="getYear(0)">{{calendarService.nameDate}}</div>
+  <div class='name-date' (click)="changeYear()">{{calendarService.nameDate}}</div>
   <app-month *ngIf="flag"></app-month>
   <app-year *ngIf="!flag"></app-year>
 </div>
