@@ -1,20 +1,10 @@
-div  {
-  /** Для эксплорера */
-  -ms-user-select: none;
-  /** Для мозилы */
-  -moz-user-select: none;
-  /** Для конкверора */
-  -khtml-user-select: none;
-  /**Для Сафари и Хрома */
-  -webkit-user-select: none;
-}
 div.inner {
   display: inline-table;
-  width: 350px;
+  width: 364px;
 }
 .cells, .week {
   display: inline-table;
-  width: 50px;
+  width: 52px;
   flex-wrap: wrap;
   padding: 5px;
   border: 2px groove lightgray;

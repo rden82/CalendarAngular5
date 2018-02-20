@@ -1,13 +1,22 @@
+div  {
+  /** Для эксплорера */
+  -ms-user-select: none;
+  /** Для мозилы */
+  -moz-user-select: none;
+  /** Для конкверора */
+  -khtml-user-select: none;
+  /**Для Сафари и Хрома */
+  -webkit-user-select: none;
+}
 div.inner {
   display: inline-table;
-  width: 350px;
+  width: 364px;
 }
 div.name-date {
   display: inline-table;
-  width: 350px;
+  width: 364px;
   border: 2px groove lightgray;
   text-align: center;
-  width: 350px;
   cursor: pointer;
   background: gray;
   color: white;
