@@ -2,7 +2,7 @@
 <div class="row">
 <button class="btn btn-outline-primary" (click)="change(+(-1))">&#9664;</button>
 <div class="inner">
-  <div class="name-date" (click)="changeYear()" >{{calendarService.nameDate}}</div>
+  <div class="name-date" (click)="changeYear()" > {{nameDate}} </div>
   <app-month *ngIf="flag"></app-month>
   <app-year *ngIf="!flag"></app-year>
 </div>

@@ -12,6 +12,10 @@ div.cells {
   cursor: pointer;
   font-size: small;
 }
+div.cells.foll {
+  background: lightgrey;
+  color: darkgrey;
+}
 div.cells:hover {
   background: black;
   color: white;

@@ -1,3 +1,4 @@
 <div class="inner">
-    <div class="cells" *ngFor="let month of nameMonths">{{month}}</div>
+    <div class="cells" *ngFor="let month of nameMonths; let i = index" [ngClass]="{'foll': i > 11}"
+    (click)="changeYear()">{{month}}</div>
 </div>

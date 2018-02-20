@@ -17,20 +17,26 @@ export class CalendarComponent implements OnInit {
   @ViewChild(YearComponent)
   private yearComponent: YearComponent;
   flag: boolean;
+  nameDate: String;
   constructor(public calendarService: CalendarService) {
-    this.calendarService.getFlag().subscribe(flag => this.flag = flag);
+    this.flag = this.calendarService.getFlag();
+    this.nameDate = this.calendarService.nameDate;
   }
   ngOnInit() {
   }
-  change(_step): Observable<void> {
+  change(_step) {
     if (this.flag) {
-      return of(this.monthComponent.getMonth(_step));
+      this.monthComponent.getMonth(_step);
+      this.calendarService.getNameMonth();
+      this.nameDate = this.calendarService.nameDate;
     } else {
-      return of(this.yearComponent.getYear(_step));
+      this.yearComponent.getYear(_step);
+      this.calendarService.getNameMonth();
+      this.nameDate = this.calendarService.nameDate;
     }
  }
   changeYear(): void {
     this.calendarService.changeFlag();
-    this.calendarService.getFlag().subscribe(flag => this.flag = flag);
+    this.flag = this.calendarService.getFlag();
   }
 }
